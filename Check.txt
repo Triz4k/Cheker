@@ -1,0 +1,14 @@
+for _, player in pairs(game:GetService("Players"):GetPlayers()) do
+    local inventory = player:FindFirstChild("GunInventory")
+    if inventory then
+        local slot1 = inventory:FindFirstChild("Slot1")
+        local slot2 = inventory:FindFirstChild("Slot2")
+        local slot3 = inventory:FindFirstChild("Slot3")
+
+        print(player.Name .. "'s GunInventory:")
+        print("Slot1:", slot1 and slot1.Value or "N/A")
+        print("Slot2:", slot2 and slot2.Value or "N/A")
+        print("Slot3:", slot3 and slot3.Value or "N/A")
+        print("-------------")
+    end
+end
